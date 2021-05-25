@@ -6,7 +6,6 @@ class Api extends Component {
   state = {
     data: [],
   };
-  
 
   // Code is invoked after the component is mounted/inserted into the DOM tree.
   componentDidMount() {
@@ -22,14 +21,16 @@ class Api extends Component {
       });
   }
 
-  const [couponList, setCouponList] = React.useState(Array<Coupon>());
-
   render() {
     const { data } = this.state;
 
     const result = data.map((entry, index) => <li key={index}>{entry}</li>);
 
-    return <><ul>{result}</ul> {param} </>;
+    return (
+      <>
+        <ul>{result}</ul>
+      </>
+    );
   }
 }
 
